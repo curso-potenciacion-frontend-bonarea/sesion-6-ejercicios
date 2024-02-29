@@ -1,0 +1,114 @@
+@use "./variables";
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: variables.$font-family-text;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+select {
+  padding: 10px 5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    &:not([type="checkbox"]) {
+      width: 300px;
+    }
+  }
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+
+  > * {
+    flex: 1;
+  }
+}
+
+.user-data {
+  display: flex;
+  flex-direction: column;
+  border: 1px dashed #ccc;
+  padding: 20px;
+}
+
+.button {
+  background-color: #ccc;
+  padding: 10px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+}
